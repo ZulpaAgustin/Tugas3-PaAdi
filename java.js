@@ -1,0 +1,2 @@
+//Biodata
+let nama="Zulpa";

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Sidebar</title>
+   <!-- Link CSS -->
+   <link rel="stylesheet" href="style.css">
+   <!-- Link ICON -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+   <!-- Menu Button -->
+   <div class="menu-btn">
+      <button type="submit">Follow</button>
+   </div>
+   <div class="side-bar">
+      <!-- header section -->
+      <header>
+         <!-- close button -->
+         <div class="close-btn">
+            <i class="fas fa-times"></i>
+         </div>
+         <!-- image -->
+         <img src="poto.jpg" alt="">
+         <!-- logo -->
+         <h1>Zulpa Agustin</h1>
+      </header>
+
+      <!-- Menu items -->
+      <div class="menu">
+         <div class="item"><a href=""><i class="fa-brands fa-square-instagram"></i>Instagram</a></div>
+         <div class="item"><a href=""><i class="fa-brands fa-facebook"></i>Facebook</a></div>
+         <div class="item"><a href=""><i class="fa-brands fa-tiktok"></i>Tik-Tok</a></div>
+         <div class="item"><a href=""><i class="fa-brands fa-twitter"></i>Twitter</a></div>
+         <div class="item"><a href=""><i class="fas fa-info-circle"></i>Info</a></div>
+      </div>
+   </div>
+
+   <!-- Link Jquery -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script>
+      $(document).ready(function(){
+         // jquery for expand and collapse the sidebar
+         $('.menu-btn').click(function(){
+            $('.side-bar').addClass('active');
+            $('.menu-btn').css("visibility","hidden");
+         });
+         // for close button
+         $('.close-btn').click(function(){
+            $('.side-bar').removeClass('active');
+            $('.menu-btn').css("visibility","visible");
+         });
+         // jquery for toggle sub menus
+         $('.sub-btn').click(function(){
+            $('this').next('.sub-menu').slideToggle();
+            $(this).find('.dropdown').toggleClass('rotate');
+         });
+      });
+   </script>
+   <script src="java.js"></script>
+</body>
+</html>
