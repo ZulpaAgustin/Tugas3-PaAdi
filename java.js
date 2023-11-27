@@ -1,2 +1,0 @@
-//Biodata
-let nama="Zulpa";
